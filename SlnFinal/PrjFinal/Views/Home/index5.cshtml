@@ -1,0 +1,24 @@
+﻿@model PrjFinal.Models.TableFinalExams1081703
+
+@{
+    ViewBag.Title = "第五題";
+}
+
+<form method="post" action="@Url.Action("QueryByID")">
+    <div class="panel panel-primary">
+        <div class="panel-heading">資料查詢</div>
+        <div class="panel-body">
+            <p>
+                訂單號碼：
+                <input type="text" class="form-control" name="OrderCode" required />
+            </p>
+            <p>
+                客戶編號：
+                <input type="text" class="form-control" name="CusCode" required />
+            </p>
+            <p>
+                <button type="submit" class="btn btn-primary">查詢</button>
+            </p>
+        </div>
+    </div>
+</form>

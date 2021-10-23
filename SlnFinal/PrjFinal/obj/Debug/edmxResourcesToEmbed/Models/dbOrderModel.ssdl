@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbOrderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TableFinalExams1081703">
+    <Key>
+      <PropertyRef Name="訂單號碼" />
+    </Key>
+    <Property Name="訂單號碼" Type="int" Nullable="false" />
+    <Property Name="客戶編號" Type="nvarchar" MaxLength="5" />
+    <Property Name="員工編號" Type="int" />
+    <Property Name="訂單日期" Type="datetime" />
+    <Property Name="要貨日期" Type="datetime" />
+    <Property Name="送貨日期" Type="datetime" />
+    <Property Name="送貨方式" Type="int" />
+    <Property Name="運費" Type="money" />
+    <Property Name="收貨人" Type="nvarchar" MaxLength="40" />
+    <Property Name="送貨地址" Type="nvarchar" MaxLength="60" />
+    <Property Name="送貨城市" Type="nvarchar" MaxLength="15" />
+    <Property Name="送貨行政區" Type="nvarchar" MaxLength="15" />
+    <Property Name="送貨郵遞區號" Type="nvarchar" MaxLength="10" />
+    <Property Name="送貨國家地區" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityContainer Name="dbOrderModelStoreContainer">
+    <EntitySet Name="TableFinalExams1081703" EntityType="Self.TableFinalExams1081703" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

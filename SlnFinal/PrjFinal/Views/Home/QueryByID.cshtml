@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PrjFinal.Models.TableFinalExams1081703>
+
+@{
+    ViewBag.Title = "QueryByID";
+}
+
+<h2>資料查詢</h2>
+@if (Model.Count() == 0)
+{
+    <div class="alert alert-info">
+        <strong>無符合之資料</strong>
+    </div>
+}
+else
+{
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.訂單號碼)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.客戶編號)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.員工編號)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.送貨地址)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.訂單號碼)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.客戶編號)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.員工編號)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.送貨地址)
+    </td>
+</tr>
+        <tr>
+            @{
+                string imgName;
+            }
+            <td>
+                @foreach (var m in Model)
+                {
+                    imgName = item.員工編號.ToString() + ".gif";
+                    <img src="~/images/@imgName" />
+                }
+            </td>
+        </tr>
+    }
+</table>
+}
+

@@ -1,0 +1,29 @@
+﻿@model PrjFinal.Models.TableFinalExams1081703
+
+
+@{
+    ViewBag.Title = "第二題";
+}
+
+
+
+<form method="post" action="@Url.Action("ShowCity")">
+    
+    <br />
+    <b>送貨城市</b><select name="cityname">
+        <option name="宜蘭市">宜蘭市</option>
+        <option name="台中市">台中市</option>
+        <option name="新竹市">新竹市</option>
+        <option name="高雄市">高雄市</option>
+        <option name="南投縣">南投縣</option>
+        <option name="苗栗縣">苗栗縣</option>
+        <option name="桃園縣">桃園縣</option>
+        <option name="台北市">台北市</option>
+        <option name="台北縣">台北縣</option>
+        <option name="屏東縣">屏東縣</option>
+        <option name="花蓮市">花蓮市</option>
+        <option name="屏東市">屏東市</option>
+    </select><br />
+    <button type="submit" class="btn btn-outline-primary">查詢</button>
+</form>
+
